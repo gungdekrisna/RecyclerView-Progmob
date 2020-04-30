@@ -5,12 +5,14 @@ public class Guesthouse {
     private String deskripsi;
     private String lokasi;
     private int icon;
+    private String harga;
 
-    public Guesthouse(String nama, String deskripsi, String lokasi, int icon) {
+    public Guesthouse(String nama, String deskripsi, String lokasi, int icon, String harga) {
         this.nama = nama;
         this.deskripsi = deskripsi;
         this.lokasi = lokasi;
         this.icon = icon;
+        this.harga = harga;
     }
 
     public String getNama() {
@@ -43,5 +45,13 @@ public class Guesthouse {
 
     public void setIcon(int icon) {
         this.icon = icon;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
     }
 }
