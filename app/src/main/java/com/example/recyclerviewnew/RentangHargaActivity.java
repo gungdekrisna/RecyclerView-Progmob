@@ -67,5 +67,6 @@ public class RentangHargaActivity extends AppCompatActivity {
         rentangHargaArrayList.add(new RentangHarga("IDR 600K - 700K / Night", jumlahKamar));
         rentangHargaArrayList.add(new RentangHarga("IDR 700K - 800K / Night", jumlahKamar));
         rentangHargaArrayList.add(new RentangHarga("IDR 800K - 900K / Night", jumlahKamar));
+        rentangHargaArrayList.add(new RentangHarga("> 900K / Night", jumlahKamar));
     }
 }

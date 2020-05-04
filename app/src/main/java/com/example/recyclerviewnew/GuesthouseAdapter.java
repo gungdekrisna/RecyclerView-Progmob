@@ -29,7 +29,7 @@ public class GuesthouseAdapter extends RecyclerView.Adapter<GuesthouseAdapter.Gu
     @Override
     public void onBindViewHolder(GuesthouseViewHolder holder, int position) {
         holder.txtNama.setText(dataList.get(position).getNama());
-        holder.txtDeskripsi.setText(dataList.get(position).getDeskripsi());
+        holder.txtjumlahKamar.setText(dataList.get(position).getJumlahKamar());
         holder.txtLokasi.setText(dataList.get(position).getLokasi());
         holder.imgIcon.setImageResource(dataList.get(position).getIcon());
         holder.txtHarga.setText(dataList.get(position).getHarga());
@@ -42,13 +42,13 @@ public class GuesthouseAdapter extends RecyclerView.Adapter<GuesthouseAdapter.Gu
 
 
     public class GuesthouseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private TextView txtNama, txtDeskripsi, txtLokasi, txtHarga;
+        private TextView txtNama, txtjumlahKamar, txtLokasi, txtHarga;
         private ImageView imgIcon;
 
         public GuesthouseViewHolder(View itemView) {
             super(itemView);
             txtNama = (TextView) itemView.findViewById(R.id.txt_nama);
-            txtDeskripsi = (TextView) itemView.findViewById(R.id.txt_deskripsi);
+            txtjumlahKamar = (TextView) itemView.findViewById(R.id.txt_jumlah_kamar);
             txtLokasi = (TextView) itemView.findViewById(R.id.txt_lokasi);
             imgIcon = (ImageView) itemView.findViewById(R.id.icon);
             txtHarga = (TextView) itemView.findViewById(R.id.txt_harga);

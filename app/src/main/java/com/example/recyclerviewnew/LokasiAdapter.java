@@ -3,6 +3,7 @@ package com.example.recyclerviewnew;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,6 +29,7 @@ public class LokasiAdapter extends RecyclerView.Adapter<LokasiAdapter.LokasiView
     @Override
     public void onBindViewHolder(LokasiAdapter.LokasiViewHolder holder, int position) {
         holder.txtLokasi.setText(dataList.get(position).getLokasi());
+        holder.imgLokasi.setImageResource(dataList.get(position).getImg_lokasi());
     }
 
     @Override
@@ -38,10 +40,13 @@ public class LokasiAdapter extends RecyclerView.Adapter<LokasiAdapter.LokasiView
 
     public class LokasiViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView txtLokasi;
+        private ImageView imgLokasi;
 
         public LokasiViewHolder(View itemView) {
             super(itemView);
             txtLokasi = (TextView) itemView.findViewById(R.id.txt_lokasi);
+            imgLokasi = (ImageView) itemView.findViewById(R.id.img_lokasi);
+
             itemView.setOnClickListener(this);
         }
 

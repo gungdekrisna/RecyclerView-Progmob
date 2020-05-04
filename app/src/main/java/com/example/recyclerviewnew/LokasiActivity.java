@@ -62,9 +62,9 @@ public class LokasiActivity extends AppCompatActivity {
 
         /*Memasukan ke array*/
         lokasiArrayList = new ArrayList<>();
-        lokasiArrayList.add(new Lokasi("Canggu", rentangHarga, jumlahKamar));
-        lokasiArrayList.add(new Lokasi("Kuta", rentangHarga, jumlahKamar));
-        lokasiArrayList.add(new Lokasi("Uluwatu", rentangHarga, jumlahKamar));
-        lokasiArrayList.add(new Lokasi("Ubud", rentangHarga, jumlahKamar));
+        lokasiArrayList.add(new Lokasi("Canggu", rentangHarga, jumlahKamar, R.drawable.gh12));
+        lokasiArrayList.add(new Lokasi("Kuta", rentangHarga, jumlahKamar, R.drawable.gh12));
+        lokasiArrayList.add(new Lokasi("Uluwatu", rentangHarga, jumlahKamar, R.drawable.gh12));
+        lokasiArrayList.add(new Lokasi("Ubud", rentangHarga, jumlahKamar, R.drawable.gh12));
     }
 }
