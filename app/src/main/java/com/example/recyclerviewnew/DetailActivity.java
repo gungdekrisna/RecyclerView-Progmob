@@ -3,6 +3,7 @@ package com.example.recyclerviewnew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
@@ -13,22 +14,30 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         TextView namaText = findViewById(R.id.detail_title);
-        /*TextView nama2Text = findViewById(R.id.detail_title2);
-        TextView nama3Text = findViewById(R.id.detail_title3);*/
+        ImageView iconImg = findViewById(R.id.detail_icon);
+        TextView jumlahKamarText = findViewById(R.id.detail_jumlah_kamar);
+        TextView hargaText = findViewById(R.id.detail_harga);
+        TextView lokasiText = findViewById(R.id.detail_lokasi);
 
-        String nama = "Username not set";
-        /*String nama2 = "Username 2 not set";
-        String nama3 = "username 3 not set";*/
+        String nama = "Guesthouse name not set";
+        int icon = R.drawable.gh1;
+        String jumlahkamar = "Jumlah kamar not set";
+        String harga = "Harga not set";
+        String lokasi = "Lokasi not set";
 
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             nama = extras.getString("Nama");
-            /*nama2 = extras.getString("rentangHarga");
-            nama3 = extras.getString("lokasi");*/
+            icon = extras.getInt("Image");
+            jumlahkamar = extras.getString("JumlahKamar");
+            harga = extras.getString("Harga");
+            lokasi = extras.getString("Lokasi");
         }
 
         namaText.setText(nama);
-        /*nama2Text.setText(nama2);
-        nama3Text.setText(nama3);*/
+        iconImg.setImageResource(icon);
+        jumlahKamarText.setText(jumlahkamar);
+        hargaText.setText(harga);
+        lokasiText.setText(lokasi);
     }
 }

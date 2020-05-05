@@ -30,6 +30,7 @@ public class LokasiAdapter extends RecyclerView.Adapter<LokasiAdapter.LokasiView
     public void onBindViewHolder(LokasiAdapter.LokasiViewHolder holder, int position) {
         holder.txtLokasi.setText(dataList.get(position).getLokasi());
         holder.imgLokasi.setImageResource(dataList.get(position).getImg_lokasi());
+        holder.txtDeskripsiLokasi.setText(dataList.get(position).getDeskripsiLokasi());
     }
 
     @Override
@@ -39,13 +40,14 @@ public class LokasiAdapter extends RecyclerView.Adapter<LokasiAdapter.LokasiView
 
 
     public class LokasiViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView txtLokasi;
+        private TextView txtLokasi, txtDeskripsiLokasi;
         private ImageView imgLokasi;
 
         public LokasiViewHolder(View itemView) {
             super(itemView);
             txtLokasi = (TextView) itemView.findViewById(R.id.txt_lokasi);
             imgLokasi = (ImageView) itemView.findViewById(R.id.img_lokasi);
+            txtDeskripsiLokasi = (TextView) itemView.findViewById(R.id.txt_deskripsi_lokasi);
 
             itemView.setOnClickListener(this);
         }

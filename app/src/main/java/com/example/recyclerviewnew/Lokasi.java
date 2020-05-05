@@ -5,12 +5,14 @@ public class Lokasi {
     private String rentangHarga;
     private String jumlahKamar;
     private int img_lokasi;
+    private String deskripsiLokasi;
 
-    public Lokasi(String lokasi, String rentangHarga, String jumlahKamar, int img_lokasi) {
+    public Lokasi(String lokasi, String rentangHarga, String jumlahKamar, int img_lokasi, String deskripsiLokasi) {
         this.lokasi = lokasi;
         this.jumlahKamar = jumlahKamar;
         this.rentangHarga = rentangHarga;
         this.img_lokasi = img_lokasi;
+        this.deskripsiLokasi = deskripsiLokasi;
     }
 
     public String getLokasi(){
@@ -43,5 +45,13 @@ public class Lokasi {
 
     public void setImg_lokasi(int img_lokasi) {
         this.img_lokasi = img_lokasi;
+    }
+
+    public String getDeskripsiLokasi(){
+        return deskripsiLokasi;
+    }
+
+    public void setDeskripsiLokasi(String deskripsiLokasi) {
+        this.deskripsiLokasi = deskripsiLokasi;
     }
 }

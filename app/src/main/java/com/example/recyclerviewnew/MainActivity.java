@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v, int position) {
                 Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
                 intent.putExtra("Nama", guesthouseArrayList.get(position).getNama());
+                intent.putExtra("Image", guesthouseArrayList.get(position).getIcon());
+                intent.putExtra("JumlahKamar", guesthouseArrayList.get(position).getJumlahKamar());
+                intent.putExtra("Harga", guesthouseArrayList.get(position).getHarga());
+                intent.putExtra("Lokasi", guesthouseArrayList.get(position).getLokasi());
                 startActivity(intent);
             }
         };
