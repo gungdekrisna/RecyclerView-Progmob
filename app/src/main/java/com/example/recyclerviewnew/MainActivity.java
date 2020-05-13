@@ -1,14 +1,13 @@
 package com.example.recyclerviewnew;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -90,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
         Guesthouse p12 = new Guesthouse("Cito Guesthouse", "2 Room", "Nyuh Kuning Street, Kuta, Bali", R.drawable.gh11, "700000", 700000, "Kuta", 2, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
         Guesthouse p13 = new Guesthouse("Sunari Guesthouse Ubud", "8 Room", "Sanggingan Street, Ubud, Bali", R.drawable.gh12, "400000", 400000, "Ubud", 8, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
         Guesthouse p14 = new Guesthouse("Ujung Ubud Guest House", "3 Room", "Sriwedari Street, Ubud, Bali", R.drawable.gh13, "300000", 300000, "Ubud", 3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        //tambahan mega
+        Guesthouse p15 = new Guesthouse("Nurada Cottage", "1 Room", "Sriwedari Street, Ubud, Bali", R.drawable.gh13, "300000", 300000, "Ubud", 3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
 
         List<Guesthouse> guesthouse = Arrays.asList(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14);
 
