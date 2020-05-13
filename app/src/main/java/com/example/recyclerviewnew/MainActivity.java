@@ -23,25 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);/*
-        TextView jumlahKamarText = findViewById(R.id.txtjumlahKamar);
-        TextView rentangHargaText = findViewById(R.id.txtrentangHarga);
-        TextView lokasiText = findViewById(R.id.txtLokasi);
-
-        String varjumlahKamarText = "Jumlah Kamar not set";
-        String varrentangHarga = "Rentang Harga not set";
-        String varlokasi = "Lokasi not set";
-
-        Bundle extras = getIntent().getExtras();
-        if (extras != null){
-            varjumlahKamarText = extras.getString("jumlahKamar");
-            varrentangHarga = extras.getString("rentangHarga");
-            varlokasi = extras.getString("lokasi");
-        }
-
-        jumlahKamarText.setText(varjumlahKamarText);
-        rentangHargaText.setText(varrentangHarga);
-        lokasiText.setText(varlokasi);*/
+        setContentView(R.layout.activity_main);
 
         addData();
 
@@ -68,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("JumlahKamar", guesthouseArrayList.get(position).getJumlahKamar());
                 intent.putExtra("Harga", guesthouseArrayList.get(position).getHarga());
                 intent.putExtra("Lokasi", guesthouseArrayList.get(position).getLokasi());
+                intent.putExtra("Facility1", guesthouseArrayList.get(position).getFacility1());
+                intent.putExtra("Facility2", guesthouseArrayList.get(position).getFacility2());
+                intent.putExtra("Facility3", guesthouseArrayList.get(position).getFacility3());
+                intent.putExtra("Facility4", guesthouseArrayList.get(position).getFacility4());
+                intent.putExtra("Wisata1", guesthouseArrayList.get(position).getWisata1());
+                intent.putExtra("Wisata2", guesthouseArrayList.get(position).getWisata2());
+                intent.putExtra("Wisata3", guesthouseArrayList.get(position).getWisata3());
+                intent.putExtra("Wisata4", guesthouseArrayList.get(position).getWisata4());
                 startActivity(intent);
             }
         };
@@ -86,20 +76,20 @@ public class MainActivity extends AppCompatActivity {
 
         guesthouseArrayList = new ArrayList<>();
 
-        Guesthouse p1 = new Guesthouse("Soca Garden Guesthouse", "3 Room", "Sanggingan Street, Ubud, Bali", R.drawable.gh1, "500000", 500000, "Ubud", 3);
-        Guesthouse p2 = new Guesthouse("Umalas Guesthouse", "3 Room", "Bima Street, Canggu, Bali", R.drawable.gh1, "500000", 500000, "Canggu",3);
-        Guesthouse p3 = new Guesthouse("Kamala Ubud Guesthouse", "4 Room", "Monkey Forest Street, Ubud, Bali", R.drawable.gh2, "600000", 600000, "Ubud", 4);
-        Guesthouse p4 = new Guesthouse("The Village Guest House", "5 Room", "Kajeng Street, Kuta, Bali", R.drawable.gh3, "1000000", 1000000, "Kuta", 5);
-        Guesthouse p5 = new Guesthouse("Manggis Sari Guesthouse", "3 room", "Suweta Street, Uluwatu, Bali", R.drawable.gh4, "900000", 900000, "Uluwatu", 3);
-        Guesthouse p6 = new Guesthouse("Nyoman Sandi Guesthouse", "4 Room", "Hanoman Street, Canggu, Bali", R.drawable.gh5, "200000", 200000, "Canggu", 4);
-        Guesthouse p7 = new Guesthouse("Loka Sari Guest House", "4 Room", "Kuwera Street, Kuta, Bali", R.drawable.gh6, "300000", 300000, "Kuta", 4);
-        Guesthouse p8 = new Guesthouse("Kudos Guesthouse Ubud", "3 Room", "Arjuna Street, Ubud, Bali", R.drawable.gh7, "400000", 400000, "Ubud", 3);
-        Guesthouse p9 = new Guesthouse("Sandat Bali Ubud Guesthouse", "2 Room", "Sambahan Street, Ubud, Bali", R.drawable.gh8, "500000", 500000, "Ubud", 2);
-        Guesthouse p10 = new Guesthouse("Putu's Paradise Guesthouse", "3 Room", "Gotama Street, Uluwatu, Bali", R.drawable.gh9, "250000", 250000, "Uluwatu", 3);
-        Guesthouse p11 = new Guesthouse("Teba Homestay", "4 Room", "Berawa Street, Canggu, Bali", R.drawable.gh10, "300000", 300000, "Canggu", 4);
-        Guesthouse p12 = new Guesthouse("Cito Guesthouse", "2 Room", "Nyuh Kuning Street, Kuta, Bali", R.drawable.gh11, "700000", 700000, "Kuta", 2);
-        Guesthouse p13 = new Guesthouse("Sunari Guesthouse Ubud", "8 Room", "Sanggingan Street, Ubud, Bali", R.drawable.gh12, "400000", 400000, "Ubud", 8);
-        Guesthouse p14 = new Guesthouse("Ujung Ubud Guest House", "3 Room", "Sriwedari Street, Ubud, Bali", R.drawable.gh13, "300000", 300000, "Ubud", 3);
+        Guesthouse p1 = new Guesthouse("Soca Garden Guesthouse", "3 Room", "Sanggingan Street, Ubud, Bali", R.drawable.gh1, "500000", 500000, "Ubud", 3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p2 = new Guesthouse("Umalas Guesthouse", "3 Room", "Bima Street, Canggu, Bali", R.drawable.gh1, "500000", 500000, "Canggu",3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "Ubud Palace", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p3 = new Guesthouse("Kamala Ubud Guesthouse", "4 Room", "Monkey Forest Street, Ubud, Bali", R.drawable.gh2, "600000", 600000, "Ubud", 4, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p4 = new Guesthouse("The Village Guest House", "5 Room", "Kajeng Street, Kuta, Bali", R.drawable.gh3, "1000000", 1000000, "Kuta", 5, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p5 = new Guesthouse("Manggis Sari Guesthouse", "3 room", "Suweta Street, Uluwatu, Bali", R.drawable.gh4, "900000", 900000, "Uluwatu", 3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p6 = new Guesthouse("Nyoman Sandi Guesthouse", "4 Room", "Hanoman Street, Canggu, Bali", R.drawable.gh5, "200000", 200000, "Canggu", 4, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p7 = new Guesthouse("Loka Sari Guest House", "4 Room", "Kuwera Street, Kuta, Bali", R.drawable.gh6, "300000", 300000, "Kuta", 4, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p8 = new Guesthouse("Kudos Guesthouse Ubud", "3 Room", "Arjuna Street, Ubud, Bali", R.drawable.gh7, "400000", 400000, "Ubud", 3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p9 = new Guesthouse("Sandat Bali Ubud Guesthouse", "2 Room", "Sambahan Street, Ubud, Bali", R.drawable.gh8, "500000", 500000, "Ubud", 2, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p10 = new Guesthouse("Putu's Paradise Guesthouse", "3 Room", "Gotama Street, Uluwatu, Bali", R.drawable.gh9, "250000", 250000, "Uluwatu", 3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p11 = new Guesthouse("Teba Homestay", "4 Room", "Berawa Street, Canggu, Bali", R.drawable.gh10, "300000", 300000, "Canggu", 4, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p12 = new Guesthouse("Cito Guesthouse", "2 Room", "Nyuh Kuning Street, Kuta, Bali", R.drawable.gh11, "700000", 700000, "Kuta", 2, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p13 = new Guesthouse("Sunari Guesthouse Ubud", "8 Room", "Sanggingan Street, Ubud, Bali", R.drawable.gh12, "400000", 400000, "Ubud", 8, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
+        Guesthouse p14 = new Guesthouse("Ujung Ubud Guest House", "3 Room", "Sriwedari Street, Ubud, Bali", R.drawable.gh13, "300000", 300000, "Ubud", 3, "Free Parking", "Free Wi-Fi", "Food & Drink", "Taxi Service Avaiable", "The Monkey Forest & Sanctuary Ubud", "Ubud Palace", "Campuhan Bridge Trekking", "Blanco Art Museum");
 
         List<Guesthouse> guesthouse = Arrays.asList(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14);
 

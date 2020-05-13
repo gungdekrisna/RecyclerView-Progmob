@@ -42,7 +42,7 @@ public class GuesthouseAdapter extends RecyclerView.Adapter<GuesthouseAdapter.Gu
 
 
     public class GuesthouseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private TextView txtNama, txtjumlahKamar, txtLokasi, txtHarga;
+        private TextView txtNama, txtjumlahKamar, txtLokasi, txtHarga, txtFacility1, txtFacility2, txtFacility3, txtFacility4, txtWisata1, txtWisata2, txtWisata3, txtWisata4;
         private ImageView imgIcon;
 
         public GuesthouseViewHolder(View itemView) {
