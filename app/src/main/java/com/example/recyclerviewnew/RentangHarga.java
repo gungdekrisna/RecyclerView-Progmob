@@ -2,9 +2,9 @@ package com.example.recyclerviewnew;
 
 public class RentangHarga {
     private String rentangHarga;
-    private String jumlahKamar;
+    private int jumlahKamar;
 
-    public RentangHarga(String rentangHarga, String jumlahKamar) {
+    public RentangHarga(String rentangHarga, int jumlahKamar) {
         this.rentangHarga = rentangHarga;
         this.jumlahKamar = jumlahKamar;
     }
@@ -17,11 +17,11 @@ public class RentangHarga {
         this.rentangHarga = rentangHarga;
     }
 
-    public String getJumlahKamar(){
+    public int getJumlahKamar(){
         return jumlahKamar;
     }
 
-    public void setJumlahKamar(String jumlahKamar) {
+    public void setJumlahKamar(int jumlahKamar) {
         this.jumlahKamar = jumlahKamar;
     }
 }

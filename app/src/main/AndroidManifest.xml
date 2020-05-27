@@ -9,14 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LokasiActivity"></activity>
-        <activity android:name=".RentangHargaActivity"></activity>
-        <activity android:name=".JumlahKamarActivity">
+        <activity android:name=".JumlahKamarNumPicker">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LokasiActivity" />
+        <activity android:name=".RentangHargaActivity" />
+        <activity android:name=".JumlahKamarActivity">
         </activity>
         <activity android:name=".DetailActivity" />
         <activity android:name=".MainActivity" />

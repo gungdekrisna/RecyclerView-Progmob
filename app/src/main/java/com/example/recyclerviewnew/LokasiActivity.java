@@ -53,11 +53,11 @@ public class LokasiActivity extends AppCompatActivity {
 
     private void addData() {
         /*Menerima Data Jumlah Kamar*/
-        String jumlahKamar;
+        int jumlahKamar;
         String rentangHarga;
 
         Bundle extras = getIntent().getExtras();
-        jumlahKamar = extras.getString("jumlahKamar");
+        jumlahKamar = extras.getInt("jumlahKamar");
         rentangHarga = extras.getString("rentangHarga");
 
         /*Memasukan ke array*/

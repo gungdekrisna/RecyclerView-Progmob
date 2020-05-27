@@ -25,6 +25,29 @@
                 android:id="@+id/detail_icon"
                 />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/detail_harga"
+                    android:gravity="end"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout><!--
+
             <TextView
                 android:id="@+id/detail_title"
                 android:layout_width="match_parent"
@@ -37,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:paddingTop="10dp"
                 android:paddingLeft="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" />-->
 
             <TextView
                 android:id="@+id/detail_jumlah_kamar"

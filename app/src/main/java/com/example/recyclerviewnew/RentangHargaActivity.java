@@ -52,21 +52,16 @@ public class RentangHargaActivity extends AppCompatActivity {
 
     private void addData() {
         /*Menerima Data Jumlah Kamar*/
-        String jumlahKamar;
+        int jumlahKamar;
 
         Bundle extras = getIntent().getExtras();
-        jumlahKamar = extras.getString("JumlahKamar");
+        jumlahKamar = extras.getInt("JumlahKamar");
 
         /*Memasukan ke array*/
         rentangHargaArrayList = new ArrayList<>();
-        rentangHargaArrayList.add(new RentangHarga("IDR 100K - 200K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("IDR 200K - 300K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("IDR 300K - 400K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("IDR 400K - 500K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("IDR 500K - 600K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("IDR 600K - 700K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("IDR 700K - 800K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("IDR 800K - 900K / Night", jumlahKamar));
-        rentangHargaArrayList.add(new RentangHarga("> 900K / Night", jumlahKamar));
+        rentangHargaArrayList.add(new RentangHarga("IDR 100K - 400K / Night", jumlahKamar));
+        rentangHargaArrayList.add(new RentangHarga("IDR 400K - 700K / Night", jumlahKamar));
+        rentangHargaArrayList.add(new RentangHarga("IDR 700K - 1000K / Night", jumlahKamar));
+        rentangHargaArrayList.add(new RentangHarga("> 1000K / Night", jumlahKamar));
     }
 }

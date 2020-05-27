@@ -3,11 +3,11 @@ package com.example.recyclerviewnew;
 public class Lokasi {
     private String lokasi;
     private String rentangHarga;
-    private String jumlahKamar;
+    private int jumlahKamar;
     private int img_lokasi;
     private String deskripsiLokasi;
 
-    public Lokasi(String lokasi, String rentangHarga, String jumlahKamar, int img_lokasi, String deskripsiLokasi) {
+    public Lokasi(String lokasi, String rentangHarga, int jumlahKamar, int img_lokasi, String deskripsiLokasi) {
         this.lokasi = lokasi;
         this.jumlahKamar = jumlahKamar;
         this.rentangHarga = rentangHarga;
@@ -31,11 +31,11 @@ public class Lokasi {
         this.rentangHarga = rentangHarga;
     }
 
-    public String getJumlahKamar(){
+    public int getJumlahKamar(){
         return jumlahKamar;
     }
 
-    public void setJumlahKamar(String jumlahKamar) {
+    public void setJumlahKamar(int jumlahKamar) {
         this.jumlahKamar = jumlahKamar;
     }
 
