@@ -18,8 +18,6 @@
         </activity>
         <activity android:name=".LokasiActivity" />
         <activity android:name=".RentangHargaActivity" />
-        <activity android:name=".JumlahKamarActivity">
-        </activity>
         <activity android:name=".DetailActivity" />
         <activity android:name=".MainActivity" />
     </application>

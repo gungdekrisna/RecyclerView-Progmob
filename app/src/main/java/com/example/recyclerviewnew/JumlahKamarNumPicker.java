@@ -38,7 +38,7 @@ public class JumlahKamarNumPicker extends AppCompatActivity {
         imgPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (num == 9){
+                if (num == 8){
                     num = 1;
                 } else {
                     num++;
