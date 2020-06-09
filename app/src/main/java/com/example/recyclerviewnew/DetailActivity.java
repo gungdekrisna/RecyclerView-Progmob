@@ -3,8 +3,11 @@ package com.example.recyclerviewnew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -71,5 +74,17 @@ public class DetailActivity extends AppCompatActivity {
         wisata2Text.setText(wisata2);
         wisata3Text.setText(wisata3);
         wisata4Text.setText(wisata4);
+
+        Button btn1 = (Button) findViewById(R.id.bookingBtn);
+        final String finalNama = nama;
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str1 = finalNama;
+                String str2 = " Booked!";
+                String concatenatedText = str1 + str2;
+                Toast.makeText(getBaseContext(), concatenatedText, Toast.LENGTH_SHORT ).show();
+            }
+        });
     }
 }
